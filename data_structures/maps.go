@@ -12,7 +12,7 @@ func findPeopleWithCommonInterest(data map[string][]string, interest string) []s
 
 func contains(src []string, elem string) bool {
 	for _,value := range src{
-		if value == elem{
+		if value == elem {
 			return true
 		}
 	}
