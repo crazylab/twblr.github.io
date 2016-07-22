@@ -39,5 +39,9 @@ func equals(list1 []string, list2 []string) bool {
 }
 
 func partialReverse(src []int, from, to int) []int {
-	return nil
+	result := []int{}
+	for i := to; i >= from; i-- {
+		result = append(result, src[i])
+	}
+	return result
 }
