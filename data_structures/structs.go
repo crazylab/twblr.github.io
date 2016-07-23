@@ -13,7 +13,7 @@ type Node struct{
 	prev *Node
 }
 
-func (this *LinkedList) addElement(elem int){
+func (this *LinkedList) Add(elem int){
 	anotherNode := Node{element : elem, next : nil, prev: this.last}
 
 	if this.first == nil {
@@ -24,22 +24,11 @@ func (this *LinkedList) addElement(elem int){
 	this.length += 1
 }
 
-func (this *LinkedList) searchElement(elem int) *Node{
+func (this LinkedList) Search(elem int) *Node{
 	for node := this.first; node != nil; node = node.next {
 		if node.element == elem {
 			return node
 		}
 	}
 	return nil
-}
-
-var linkedList = LinkedList{first: nil, last: nil, length: 0}
-
-func Add(elem int) {
-	linkedList.addElement(elem)
-	return
-}
-
-func Search(elem int) *Node {
-	return linkedList.searchElement(elem)
 }
