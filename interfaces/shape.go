@@ -22,10 +22,10 @@ func(aRectangle Rectangle) Area() int{
 }
 
 type Hybrid struct{
-	square Square
-	rectangle Rectangle
+	aShape Shape
+	anotherShape Shape
 }
 
 func(aHybrid Hybrid) Area() int{
-	return aHybrid.square.Area() + aHybrid.rectangle.Area()
+	return aHybrid.aShape.Area() + aHybrid.anotherShape.Area()
 }
